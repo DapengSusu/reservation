@@ -15,7 +15,7 @@ jobs:
         platform: [ubuntu-latest]
     runs-on: ${{ matrix.platform }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Install Rust
@@ -24,7 +24,7 @@ jobs:
         uses: taiki-e/install-action@cargo-llvm-cov
       - name: install nextest
         uses: taiki-e/install-action@nextest
-      - uses: Swatinem/rust-cache@v3
+      - uses: Swatinem/rust-cache@v1
       - name: Check code format
         run: cargo fmt -- --check
       - name: Check the package for errors
