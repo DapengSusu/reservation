@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = ["abi", "reservation","service"]
+
+[workspace.package]
+version = "0.1.0"
+authors = ["Jumper <dapengsusu@qq.com>"]
+edition = "2024"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com"
+description = """
+A core reservation service that solves the problem of reserving resources for a period of time.
+"""
+
+[workspace.dependencies]
